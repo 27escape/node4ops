@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for mdname in *md
+do
+    noext=$(basename "$mdname" .md)
+    pdfname="$noext.pdf"
+    tmpname="/tmp/$noext.html.$$"
+    if [ "$pdfname" -ot "$mdname" ] ; then
+        echo "Converting $mdname into $pdfname"
+        pandoc "$mdname" --from=markdown --pdf-engine=xelatex -o "$pdfname"
+    fi
+done

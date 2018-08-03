@@ -1,0 +1,7 @@
+// add the boilerplate code above
+
+// if pandoc is not installed, we need to bailout
+if (!shell.which('pandoc')) {
+  shell.echo('Sorry, this script requires pandoc, get it from https://pandoc.org');
+  shell.exit(1);
+}

@@ -1,0 +1,12 @@
+{
+    "name": "task2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/firstmod.js",
+    "scripts": {
+        "lint": "zoe",
+        "format": "zoe --fix"
+    },
+    "author": "",
+    "license": "ISC"
+}
